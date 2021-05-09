@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_layout"
+        tools:context=".view.exersice">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/exersice_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout_exersice_start"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/item_1"
+
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/exersice_name_tv_small"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/exersice_name_tv_small"
+            app:layout_constraintTop_toBottomOf="@+id/exersice_name_tv_small">
+
+            <ProgressBar
+                android:id="@+id/exersice_count_down_timer_progressbar_exercisestart"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:background="@drawable/progress_final"
+                android:indeterminate="false"
+                android:max="30"
+                android:progress="30"
+                android:progressDrawable="@drawable/prgressbar"
+                android:rotation=" 270" />
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circel2">
+
+                <TextView
+                    android:id="@+id/exersice_count_down_timer_tv_exercise_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    tools:text="60">
+
+                </TextView>
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/item_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exersice_toolbar">
+
+            <ProgressBar
+                android:id="@+id/exersice_count_down_timer_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/progress_final"
+                android:indeterminate="false"
+                android:max="10"
+                android:progress="100"
+                android:progressDrawable="@drawable/prgressbar"
+                android:rotation=" 270" />
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circel2">
+
+                <TextView
+                    android:id="@+id/exersice_count_down_timer_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    tools:text="10">
+
+                </TextView>
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/exercise_getready_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:text="آماده شو برای"
+            android:textColor="#9F9F9F"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+        <TextView
+            android:id="@+id/exersice_name_tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:padding="5dp"
+            android:text="تمرین"
+            android:textColor="#F44336"
+            android:textAlignment="center"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout_exersice_start"
+            app:layout_constraintEnd_toEndOf="@+id/exercise_iv"
+            app:layout_constraintStart_toStartOf="@+id/exercise_iv"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_iv"
+            tools:text="نام تمرین" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/exercise_iv"
+            android:layout_width="369dp"
+            android:layout_height="320dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/exersice_name_tv_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exersice_toolbar"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/exercise_name_tv_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="80sp"
+            app:layout_constraintEnd_toEndOf="@+id/exercise_getready_tv"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/exercise_getready_tv"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_getready_tv"
+            tools:text="نام تمرین" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exercise_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:scrollbars="horizontal"
+            android:scrollbarStyle="insideInset"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/exercise_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="برای اجرای انیمیشن روی ان کلیک کنید"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout_exersice_start"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout_exersice_start"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout_exersice_start" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

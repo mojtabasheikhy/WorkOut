@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="exercise"
+            type="com.example.a7minutes_workout.model.Exercisemodel" />
+    </data>
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="3dp"
+        android:textColor="@color/black"
+        tools:text="1"
+        android:id="@+id/item_tv_recycler"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/item_background"
+        setnumber="@{exercise.id }"
+        android:layout_margin="6dp"
+        >
+
+    </TextView>
+</layout>

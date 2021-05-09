@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+           <variable
+               name="history"
+               type="com.example.a7minutes_workout.model.Historydataclass" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            tools:text="1"
+            android:textColor="@color/black"
+            settextid="@{history.id}"
+            android:background="@drawable/background_btn_circle_no" />
+
+        <TextView
+            android:text="@{history.history}"
+            tools:text="data"
+            android:textStyle="bold"
+            android:padding="6dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>
